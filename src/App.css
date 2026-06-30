@@ -93,6 +93,41 @@ body {
 /* ============================================================
    NAVBAR
    ============================================================ */
+.nav-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 12px;
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--r-md);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100;
+}
+.nav-dropdown-menu a {
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--on-surface);
+  font-size: 15px;
+  transition: background 0.2s;
+}
+.nav-dropdown-menu a:hover {
+  background: var(--surface-container-low);
+  color: var(--primary);
+}
+.nav-dropdown-menu a:not(:last-child) {
+  border-bottom: 1px solid var(--outline-variant);
+}
+
 .navbar-wrap {
   position: sticky;
   top: 0;

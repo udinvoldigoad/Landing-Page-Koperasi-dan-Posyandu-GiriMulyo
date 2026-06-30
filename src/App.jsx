@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false)
+    const [dropdownOpen, setDropdownOpen] = useState(false)
 
     useEffect(() => {
         const cards = document.querySelectorAll('.card-3d')
@@ -41,7 +42,23 @@ function App() {
                         <span className="brand-divider"></span>
                         <span className="brand-sub">KKN Rekognisi ITERA</span>
                     </div>
-                    <a href="#" className="btn btn-primary btn-hover nav-cta-desktop">Layanan</a>
+                    <div className="nav-dropdown-wrapper nav-cta-desktop">
+                        <button 
+                            className="btn btn-primary btn-hover"
+                            onClick={() => setDropdownOpen(!dropdownOpen)}
+                        >
+                            Layanan
+                            <span className="material-symbols-outlined" style={{ fontSize: '20px', marginLeft: '4px' }}>
+                                {dropdownOpen ? 'arrow_drop_up' : 'arrow_drop_down'}
+                            </span>
+                        </button>
+                        {dropdownOpen && (
+                            <div className="nav-dropdown-menu">
+                                <a href="#">Posyandu</a>
+                                <a href="https://agromulyolestari.girimulyo.com">Koperasi</a>
+                            </div>
+                        )}
+                    </div>
                     <button
                         className={`hamburger${menuOpen ? ' is-active' : ''}`}
                         onClick={() => setMenuOpen(!menuOpen)}
@@ -115,10 +132,10 @@ function App() {
                             <h2>Koperasi Agro Mulyo Lestari</h2>
                             <p>Wadah ekonomi kerakyatan untuk kemajuan petani. Pemasaran hasil tani, dan penyediaan sarana produksi pertanian unggul.</p>
                             <div className="card-action">
-                                <button className="btn btn-primary btn-full btn-hover">
+                                <a href="https://agromulyolestari.girimulyo.com" className="btn btn-primary btn-full btn-hover" style={{ textDecoration: 'none' }}>
                                     Akses Profil Koperasi
                                     <span className="material-symbols-outlined btn-icon">arrow_forward</span>
-                                </button>
+                                </a>
                             </div>
                         </div>
 
@@ -191,8 +208,8 @@ function App() {
                         <p className="footer-copy">© 2026 Desa Giri Mulyo.KKN Rekognisi ITERA. Seluruh Hak Cipta Dilindungi.</p>
                     </div>
                     <div className="footer-links">
-                        <a href="#">Layanan Posyandu</a>
-                        <a href="#">Layanan Koperasi</a>
+                        <a href="#">Posyandu</a>
+                        <a href="https://agromulyolestari.girimulyo.com">Koperasi</a>
                         <a href="#">Website Desa</a>
                     </div>
                     <div className="footer-logos">
