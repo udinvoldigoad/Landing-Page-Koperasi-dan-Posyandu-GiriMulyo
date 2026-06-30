@@ -54,7 +54,7 @@ function App() {
                         </button>
                         {dropdownOpen && (
                             <div className="nav-dropdown-menu">
-                                <a href="#">Posyandu</a>
+                                <a href="https://posyandu.girimulyo.com">Posyandu</a>
                                 <a href="https://agromulyolestari.girimulyo.com">Koperasi</a>
                             </div>
                         )}
@@ -74,7 +74,7 @@ function App() {
             {/* Mobile Nav Overlay */}
             <div className={`mobile-nav-overlay${menuOpen ? ' is-open' : ''}`} onClick={() => setMenuOpen(false)}>
                 <div className="mobile-nav-panel" onClick={e => e.stopPropagation()}>
-                    <a href="#" className="mobile-nav-link" onClick={() => setMenuOpen(false)}>
+                    <a href="https://posyandu.girimulyo.com" className="mobile-nav-link" onClick={() => setMenuOpen(false)}>
                         <span className="material-symbols-outlined">health_and_safety</span>
                         Posyandu Girimulyo
                     </a>
@@ -82,7 +82,7 @@ function App() {
                         <span className="material-symbols-outlined">agriculture</span>
                         Koperasi Agro Mulyo
                     </a>
-                    <a href="#" className="mobile-nav-link" onClick={() => setMenuOpen(false)}>
+                    <a href="https://girimulyo-margasekampung.sipdeskel.id/" className="mobile-nav-link" onClick={() => setMenuOpen(false)}>
                         <span className="material-symbols-outlined">language</span>
                         Website Desa
                     </a>
@@ -116,10 +116,10 @@ function App() {
                             <h2>Posyandu Girimulyo</h2>
                             <p>Pusat layanan kesehatan keluarga terpadu. Pantau tumbuh kembang balita, kesehatan ibu hamil, dan kesejahteraan lansia di lingkungan kita.</p>
                             <div className="card-action">
-                                <button className="btn btn-primary btn-full btn-hover">
+                                <a href="https://posyandu.girimulyo.com" className="btn btn-primary btn-full btn-hover" style={{ textDecoration: 'none' }}>
                                     Akses Profil Posyandu
                                     <span className="material-symbols-outlined btn-icon">arrow_forward</span>
-                                </button>
+                                </a>
                             </div>
                         </div>
 
@@ -151,7 +151,7 @@ function App() {
                             <h2>Gotong Royong Membangun Desa</h2>
                             <p>Kami percaya bahwa kemajuan desa dimulai dari kepedulian setiap warga. Mari bergabung dan berkontribusi untuk masa depan Girimulyo yang lebih cerah.</p>
                             <div className="banner-btn-group">
-                                <button className="btn btn-white btn-hover">Website Desa</button>
+                                <a href="https://girimulyo-margasekampung.sipdeskel.id/" className="btn btn-white btn-hover" style={{ textDecoration: 'none' }}>Website Desa</a>
                             </div>
                         </div>
                         <div className="banner-pillars">
@@ -208,9 +208,9 @@ function App() {
                         <p className="footer-copy">© 2026 Desa Giri Mulyo.KKN Rekognisi ITERA. Seluruh Hak Cipta Dilindungi.</p>
                     </div>
                     <div className="footer-links">
-                        <a href="#">Posyandu</a>
+                        <a href="https://posyandu.girimulyo.com">Posyandu</a>
                         <a href="https://agromulyolestari.girimulyo.com">Koperasi</a>
-                        <a href="#">Website Desa</a>
+                        <a href="https://girimulyo-margasekampung.sipdeskel.id/">Website Desa</a>
                     </div>
                     <div className="footer-logos">
                         <img src="/assets/itera.png" alt="Logo ITERA" className="footer-logo" />
